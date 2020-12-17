@@ -1,0 +1,193 @@
+
+body{
+background-color: 	#3D4E4A;
+}
+
+.profile{
+display: flex;
+background-color: 	#3D4E4A;
+}
+/* left-section */
+.left{
+color: honeydew;
+float: left;
+background-color: #0BC294;
+display: flex;
+align-content: center;
+flex-direction: column;
+width: 400px;
+margin-left: 40px;
+border-radius: 1%;
+border: solid #212b2b 1px;
+}
+/* profile-image-section */
+.image-container {
+ margin-left: 130px;
+ margin-top: 10px;
+}
+img{
+
+    height: 150px;
+    width: 50%;
+    border-radius: 10%;
+    border: solid #212b2b 5px;
+}
+/* discription-section */
+.name{
+   text-align: center;
+   line-height: 1px;
+   font-size: 15px;
+   font-weight: bold;
+   font-family: Garamond, serif;
+
+}
+/* contact-section */
+.contact h3{
+    text-align: center;
+    border-bottom: solid  #212b2b 3px ;
+    font-weight: bold;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;	    
+    letter-spacing: 0.2rem;
+    margin-left: 20px;
+    margin-right: 20px;
+
+}
+
+.contact ul{
+
+margin-left: 50px;
+line-height: 40px;
+
+}
+.contact ul li{
+list-style: none;
+}
+/* About-section */
+.About{
+text-align: left;
+margin: 10px;
+padding-left: 5px;
+
+}
+.About h3{
+    text-align: center;
+    border-bottom: solid  #212b2b 3px ;
+    font-weight: bold;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;	    
+    letter-spacing: 0.2rem;
+    margin-left: 10px;
+    margin-right: 10px;
+
+}
+/* rightt-section */
+.right{
+float:right;
+background-color: #79B5A6;;
+color: black;
+display: flex;
+flex-direction: column;
+width: 70%;
+
+}
+/* work-experience-section */
+.workexp{
+padding-top: 10px;
+
+}
+
+.workexp h3{
+background-color: rgb(253, 246, 246);
+text-align: center;
+letter-spacing: 0.2rem;
+height: 30px;
+}
+
+.workexp .exp1{
+
+    width: 100px;
+    display: flex;
+    float: left;
+    font-weight: bold;
+    margin-left: 10px;
+
+}
+.workexp .compny1{
+ margin-right: 400px;
+ float: right;
+ line-height:0px
+
+
+
+}
+
+/* Studies-section */
+.studies h3{
+    background-color: rgb(253, 246, 246);
+    text-align: center;
+    letter-spacing: 0.2rem;
+    height: 30px;
+
+}
+
+table{
+ width: 70%;
+ border: 1px solid  rgb(253, 246, 246);
+ margin-left:15%;
+
+}
+tr{
+    line-height: 50px;
+}
+
+td{
+text-align: center;
+
+}
+/*stategies-section */
+.learning h3{
+    background-color: rgb(253, 246, 246);
+    text-align: center;
+    letter-spacing: 0.2rem;
+    height: 30px;
+
+}
+
+.learning ul{
+
+ margin-left: 30px;
+
+}
+
+.learning ul li{
+ list-style: square;
+ font-size: 20px;
+ font-weight: bold;
+ line-height: 40px;
+
+
+}
+
+/*resources-section */
+.resources ul{
+
+    margin-left: 30px;
+}
+
+.resources h3{
+    background-color: rgb(253, 246, 246);
+    text-align: center;
+    letter-spacing: 0.2rem;
+    height: 30px;
+
+}
+
+.resources ul li{
+
+    list-style: square;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 40px;
+
+}
