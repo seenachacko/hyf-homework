@@ -1,0 +1,253 @@
+body{
+    background-color:	#FEFDFD;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+.head {
+    font-weight: 900;
+    line-height: 13px;
+    border-bottom: solid #D4D0D0 3px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.head h1{
+    font-size: 25px;
+    margin-left: 10%;
+
+}
+.head h3{
+    color: 	#A9A2A2;
+    font-size: 15px;
+    margin-left: 10%;
+}
+
+.navigation{
+    margin-left: 7%;
+
+}
+.navigation ul{
+    list-style-type: none;
+    display: flex;
+    justify-content:flex-start;
+    gap: 25px;
+}
+.navigation ul li{
+    font-size: 15px;  
+    font-weight: 700;
+}
+.navigation ul li a{
+ text-decoration: none;
+color: black;
+}
+.navigation ul li a:hover{
+    color:#A9A2A2 ;
+}
+
+
+.image-container{
+  width:100%;
+
+}
+.image-container img{
+    width: 100%;
+    height: 25%;
+}
+
+
+.paragraph-container{
+   padding-left: 10%;
+  padding-right: 10%;
+
+}
+.sub-section{
+
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 100px;
+    column-gap: 11%;
+}
+
+.left-section{
+     width: 33%;
+
+}
+
+.right-section{
+
+    width: 50%;
+
+}
+
+.left-section p{
+    font-size: 14px;
+    color:#A9A2A2;
+}
+
+.right-section p{
+    font-size: 16px;
+    color:#A9A2A2;
+}
+   .logocontainer{
+    display: grid;
+    grid-template-columns: 100px 100px 100px 100px;
+    grid-template-rows: 90px 90px 90px;
+    grid-row-gap: 90px;
+    grid-column-gap:60px;
+    }
+    .logocontainer img{
+    width: 90px;
+    height: 80px;
+    
+    }
+
+
+
+    footer{
+    color: white ;
+    background-color: 	#682BC4;
+
+    }
+
+    .footer-cover{
+        display: flex;
+        column-gap: 10%;
+        padding-left: 13%;
+        padding-right: 13%;
+        padding-top: 3%;
+        padding-bottom: 5%;
+    }
+
+    .common h4{
+
+        padding-left:26%;
+         
+    }
+
+    .common ul li{
+
+        list-style: none;
+        padding-bottom: 10px;
+        font-weight: 700;
+        border-bottom: solid blueviolet 2px ;
+    }
+
+    
+
+
+    @media screen and (max-width: 1024px) {
+
+        
+        .head h1{
+            font-size: 11px;
+        }
+        .head h3{
+            font-size: 8px;
+        }
+
+
+        .navigation{
+            margin-left: 2%;
+        
+        }
+        .navigation ul{
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .navigation ul li{
+            font-size: 13px;  
+            font-weight: 700;
+        }
+
+
+
+
+        .paragraph-container{
+            padding-left: 10%;
+             padding-right: 10%;
+         
+         }
+         .sub-section{
+         
+             display: flex;
+             flex-direction: column;
+             margin-bottom: 100px;
+             column-gap: 11%;
+         }
+         
+         .left-section{
+              width: 70%;
+         
+         }
+         
+         .right-section{
+         
+             width: 80%;
+         
+         }
+         .left-section h4{
+
+             font-size: 14px;
+         }
+         .right-section h2{
+            padding-top: 5%;
+            font-size: 15px;
+         }
+
+         .left-section p{
+             font-size: 10px;
+             color:#A9A2A2;
+         }
+         
+         .right-section p{
+             font-size: 13px;
+             color:#A9A2A2;
+         }
+         .logocontainer{
+             display: grid;
+             grid-template-columns: 50px 50px 50px 50px;
+             grid-template-rows: 50px 50px 50px;
+             grid-row-gap: 60px;
+             grid-column-gap:40px;
+             }
+             .logocontainer img{
+             width: 40px;
+             height: 40px;
+             
+             }
+         
+                .footer-cover{
+                    column-gap:0 px;
+                    padding-left: 10%;
+                    padding-right: 10%;
+                    flex-direction: column;
+                    font-size: 13px;
+                    width: 150px;
+                }
+            
+                .common h4{
+            
+                    padding-left:10%;
+                    padding-right: 10%;
+                     
+                }
+
+                .common ul li{
+                    font-weight: 600;
+                    text-align: center;
+                }
+            
+    
+    }
+
+    
+ 
+
+
+
+
+
+
+
+
+
