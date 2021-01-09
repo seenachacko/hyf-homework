@@ -1,0 +1,232 @@
+body{
+   padding: 20px;
+   font-family: 'Noto Sans JP', sans-serif;
+   
+}
+
+
+.head{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.logo{
+background-color:#E1DEDE ;
+width: 10%;
+height: 110px;
+text-align: center;
+}
+.navigation{
+background-color:#E1DEDE ;
+width: 40%;
+height: 110px;
+text-align: center;
+}
+.paragraph{
+width: 65%;
+}
+.bar{
+    padding-top: 5px;
+}
+.barhead{
+    font-weight:800;
+}
+.progress-back
+{
+    width: 100%;
+    height: 30px;
+    background-color: grey;
+}
+progress{
+    width: 100%;
+    height: 30px;
+    border-radius: unset;
+    background-color: grey;
+   animation: progress-bar 2s ease-in;  
+}
+@keyframes progress-bar {
+    0% {
+        width: 0;
+    }
+    100% {
+        width:100%;
+
+}
+
+}
+ .form-input {
+    margin: 12px 0;
+  }
+  
+  .form-input label {
+    font-weight: bold;
+    display: inline-block;
+    width: 130px;
+  }
+  
+  .form-input input {
+    width: 350px;
+    height: 30px;
+    border: 2px solid #BAB6B6;
+  }
+.names{
+    display: flex;
+    flex-direction: row;
+    padding-left: 10%;
+    padding-top: 20px;
+}
+.counrty label {
+    font-weight: bold;
+    display: inline-block;
+    width: 115px;
+  }
+  .counrty{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 155px;
+  }
+.counrty select {
+    width: 250px;
+    height: 40px;
+    border: 2px solid #BAB6B6;
+    font-size: 15px;
+  }
+  .counrty select option{
+    border: 1px solid #BAB6B6;
+    font-size: 15px;
+  }
+
+  .address-input{
+    margin: 12px 0;
+  }
+  .address-input label {
+    font-weight: bold;
+    display: inline-block;
+    width: 150px;
+  }
+  
+  .address-input input {
+    width: 350px;
+    height: 30px;
+    border: 2px solid #BAB6B6;
+  }
+
+  .address{
+    display: flex;
+    flex-direction: row;
+    padding-left: 8%;
+    padding-bottom: 20px;
+}
+.discription1 {
+
+    padding-bottom: 30px;
+    padding-left: 70px;
+}
+.discription1 label{
+    font-weight: bold;
+    display: inline-block;
+    width: 200px;
+}
+
+.discription1 label p{
+    font-weight: lighter;
+    font-size:13px;
+    width: 150;
+
+}
+
+.discription1 input{
+
+    width: 65%;
+    height: 200px;
+    border: 2px solid #BAB6B6;
+}
+
+.shipping{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.shipping label{
+    font-weight: bold;
+    width: 200px;
+}
+
+.shipping input{
+    width: 50px;
+    height: 30px;
+    border: 2px solid #BAB6B6;
+
+}
+.button{
+    float:right;
+    padding-bottom: 30px;  
+    text-align: center;
+}
+
+button{
+    border:solid #BAB6B6 3px ;
+    height:100px;
+    width: 300px;
+    background-color:#E1DEDE; 
+    text-align: center;
+    font-weight: 700;
+    font-size: 20px;
+}
+@media screen and (max-width:1024px){
+
+    
+    
+    .logo{
+    width: 20%;
+    height: 90px;
+    }
+    .navigation{
+    width: 40%;
+    height: 90px;
+    text-align: center;
+    }
+    .paragraph{
+    width: 80%;
+    font-size: 10px;
+    }
+    .bar{
+        padding-top: 5px;
+    }
+    .barhead{
+        font-weight:800;
+    }
+    .progress-back
+    {
+        width: 100%;
+        height: 30px;
+        background-color: grey;
+    }
+    progress{
+        width: 100%;
+        height: 30px;
+        border-radius: unset;
+        background-color: grey;
+       animation: progress-bar 2s ease-in;  
+    }
+    .names{
+        display: block;
+        
+    }
+
+    .address{
+        display: block;
+    }
+
+    .counrty{
+        padding-left:10%;
+        width:30px;
+    }
+
+    p{
+        font-size: 15px;
+    }
+
+    .button{
+        float: none;
+    }
+}
