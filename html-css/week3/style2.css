@@ -115,7 +115,59 @@ button{
 
 
 @media screen and (max-width:1024px){
+    .logo{
+        width: 12%;
+        height: 90px;
+        text-align: center;
+        }
 
+        .heading{
+
+            font-size: 10px;
+        }
+    p{
+        font-size: 15px;
+    }
+    .checklist{
+        line-height: 50px;
+    }
+    .checkcommon{
+        display: flex;
+        flex-direction: row;
+        gap:50px;
+        padding-left: 20px;
+        
+    }
+    .checkcommon1{
+        display: flex;
+        flex-direction: row;
+        gap:50px;
+        padding-left:15px;
+    }
+    
+    .hand{
+        padding-left: 15px;
+    }
+
+    .piclist{
+        padding-top: 20px;
+        padding-bottom: 40px;
+        display: grid;
+        grid-template-columns: 100px 100px 100px 100px;
+        grid-template-rows:100px ;
+        grid-row-gap: 20px;
+        grid-column-gap:20px;
+    }
+    
+    button{
+        height:50px;
+        width: 100px;
+        text-align: center;
+        font-weight: bold;
+        font-size: 10px;
+    
+    }
+    
     
     
 
