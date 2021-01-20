@@ -10,10 +10,10 @@ const dogYearOfBirth = 2015;
 const dogYearFuture = 2025;
 const dogYearInHumanYear = dogYearFuture - dogYearOfBirth;
 const dogYear = (dogYearFuture - dogYearOfBirth) * 7;
-let inHumanYear = '\"your dog will be '+dogYearInHumanYear+' human year old in 2025\" ';
-let inDogYear =  '\"your dog will be '+dogYear+' dog year old in 2025\" ';
-let shouldShowResultInDogYears = true;
-let actualold = shouldShowResultInDogYears === true ? inDogYear:inHumanYear;
+const inHumanYear = '\"your dog will be '+dogYearInHumanYear+' human year old in 2025\" ';
+const inDogYear =  '\"your dog will be '+dogYear+' dog year old in 2025\" ';
+const shouldShowResultInDogYears = true;
+const actualold = shouldShowResultInDogYears === true ? inDogYear:inHumanYear;
 console.log(actualold);
 
 
