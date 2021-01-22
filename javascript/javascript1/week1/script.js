@@ -25,8 +25,17 @@ const peterGardenSizeInM2 = 100;
 const juliaGardenSizeInM2 = 70;
 const peterHouseCost = 2500000;
 const juliaHouseCosts = 1000000;
-const peterHousePrice = peterHouseVolume * 2.5 * 1000 + peterGardenSizeInM2 * 300;
-const juliaHousePrice = juliaHouseVolume * 2.5 * 1000 + juliaGardenSizeInM2 * 300;
+const givenValue1 = 2.5;
+const givenValue2 = 1000;
+const givenValue3 = 300;
+let housePrice=0
+function housePriceCalculation(volume,value1,value2,gardenSizeM2,value3){
+    housePrice = volume * value1 * value2 + gardenSizeM2  * value3;
+    return housePrice;
+} 
+const peterHousePrice = housePriceCalculation(peterHouseVolume,givenValue1,givenValue2,peterGardenSizeInM2,givenValue3);
+const juliaHousePrice = housePriceCalculation(juliaHouseVolume,givenValue1,givenValue2,juliaGardenSizeInM2,givenValue3);
+
 if (peterHouseCost > peterHousePrice ) {
     console.log("Peter is paying too much");    
 } else {
