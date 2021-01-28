@@ -1,7 +1,7 @@
 // Questio :flight booking
 
 function getFullname(firstName,surName,formalName,gender) {
-    if((firstName && surName)==='' ){
+    if((firstName==='')||(surName==='')){
         console.log("Enter the name");
         
     } else if(gender === 'male') {
@@ -75,10 +75,10 @@ else if(studentName ===''){
   console.log('Please enter a valid name');
 }
 
-else if(class07Students.length>=6){
-  console.log('Cannot add more students to class 07');
+else if(class07Students.length>5){
+  console.log('Cannot add more students to class07');
 }
-else if(exist==true){
+else if(exist===true){
   console.log('Student "'+ studentName +'" is already in the class');
 }  
 else{
