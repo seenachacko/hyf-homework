@@ -10,9 +10,9 @@ const names = [
     "Tala",
   ]; 
   const nameToRemove = "Ahmad";
-  for(let arrayIndex of names ){
-    if(nameToRemove === arrayIndex){
-        names.splice(arrayIndex ,1)    
+  for(let i=0;i<names.length;i++ ){
+    if(nameToRemove === names[i]){
+        names.splice(i,1)    
     }
   }
   console.log('Remaining array after removel:  '+names);
@@ -28,10 +28,10 @@ const names = [
   const travelTime = notThisFunctionName(travelInformation);
   const timeinHhMm=timeConvertiontoHhMm( travelTime);
   //refrece:how to covert decimal time to HH:mm  https://stackoverflow.com/questions/35460303/how-to-convert-decimal-hour-value-to-hhmmss/35460620
-  function timeConvertiontoHhMm(decimaltime){
+   function timeConvertiontoHhMm(decimaltime) {
   let hrs = parseInt(Number(decimaltime));
   let min = Math.round((Number(decimaltime)-hrs) * 60);
-  return(hrs+'hh:'+min+'mm');
+  return hrs+'hh:'+min+'mm';
 }
   console.log('travel time duration => '+timeinHhMm); 
 
@@ -86,9 +86,9 @@ console.log(notes);
 
 function getNote(id) {
 
-    for (const checkId of notes) {
-        if (checkId.id===id) {
-            let details = checkId;
+    for (const note of notes) {
+        if (note.id===id) {
+            let details = note;
             return details;
         }  
     }
