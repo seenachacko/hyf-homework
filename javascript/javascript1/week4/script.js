@@ -7,12 +7,12 @@ command=voice.toLowerCase();
 if (command.includes("hello my name is")) {
     let splitedstring=command.split(' ')
    user.userName=splitedstring[splitedstring.length-1];
-    return`nice to meet you ${user.userName}`   
-}
-else if ('what is my name' == command) {
+    return`nice to meet you ${user.userName}`  
+
+}else if ('what is my name' == command) {
     return `Your name is ${user.userName}`
-}
-else if(command.startsWith("add") && command.endsWith("to my todo")){
+    
+}else if(command.startsWith("add") && command.endsWith("to my todo")){
     let todoItem=command.split(' ');
     let sliceElements=todoItem.slice(1,todoItem.length-3).join(' ');
     user.todo.push(sliceElements);
@@ -43,8 +43,7 @@ else if(command.startsWith("what is ")){
     if(regExp.test(command))
     {
         const operation = command.slice(7);
-        return eval(operation) 
-        
+        return eval(operation)  
     }  
 }
 else if ('set a timer for 4 minutes' == command) {
