@@ -31,9 +31,8 @@ if (command.includes("hello my name is")) {
     return `your to have ${numberOfItemsOnTodo} todos - ${user.todo}`
 
 }else if ('what day is it today?' == command) {
-    const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-    const dateObj = new Date();
-    const month = monthNames[dateObj.getMonth()];
+     const dateObj = new Date();
+    const month= dateObj.toLocaleDateString('default', { month: 'long' });
     const year = dateObj.getFullYear();
     const date = dateObj.getDate();
     return `${date} ${month} ${year}`
