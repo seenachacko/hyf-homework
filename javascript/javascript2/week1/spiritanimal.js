@@ -4,20 +4,20 @@ let printingArea=document.getElementById('print');
 let submit=document.getElementById('submitButton');
 let index = animals[Math.floor(Math.random() * animals.length)];
 let newAnimalBUtton=document.getElementById('newSpiritAnimal');
-submit.addEventListener("click",getSpiritAnimal);
-newAnimalBUtton.addEventListener("click",getNewSpiritAnimal);
-function getSpiritAnimal(){
+submit.addEventListener("click",setSpiritAnimal);
+newAnimalBUtton.addEventListener("click",setNewSpiritAnimal);
+function setSpiritAnimal(){
     let username = textboxValue.value;
-    if(username == ""||!(isNaN(username))){
+    if(username == ""){
         printingArea.innerHTML= "enter valid name";
     }else{
         let username = textboxValue.value;
         printingArea.innerHTML= username +"-" + index;
      }
 }
-function getNewSpiritAnimal(){
+function setNewSpiritAnimal(){
     let username = textboxValue.value;
-    if(username == ""||!(isNaN(username))){
+    if(username == ""){
         printingArea.innerHTML= "enter valid name";
     }else{
         let username = textboxValue.value;
