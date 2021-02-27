@@ -5,12 +5,12 @@ const productsUl = document.querySelector('section.products ul');
 console.log(productsUl);
 function renderProducts(availableProducts) {
     availableProducts.forEach(product => {
-        /*creating elements*/
+        //creating elements
         let productLi = document.createElement('li');
         let productName = document.createElement('h2');
         let productPrice = document.createElement('p');
         let productRating = document.createElement('p');
-        /*setting innerHTML*/
+        //setting innerHTML
         productName.innerHTML = product.name;
         productPrice.innerHTML = `Price: ${product.price}`;
         productRating.innerHTML = `Rating: ${product.rating}`;
@@ -22,7 +22,7 @@ function renderProducts(availableProducts) {
     });
 }
 
-/*searching by name */
+//searching by name 
 const searchBox = document.getElementById("productName");
 const priceBox = document.getElementById("max-price");
 console.log(searchBox);
@@ -33,7 +33,7 @@ function getProductsByName() {
     productsUl.innerHTML = '';
     renderProducts(filterProducts);
 }
-/*searching by price */
+//searching by price 
 priceBox.addEventListener("keyup", getProductbyPrice);
 function getProductbyPrice() {
     const givenPrice = priceBox.value;
@@ -42,7 +42,7 @@ function getProductbyPrice() {
     renderProducts(filteredArrayByPrice);
 }
 
-/*sort */
+//sort
 const selectionBox = document.getElementById("sort-options");
 selectionBox.addEventListener('change', findSelectedValue)
 function findSelectedValue() {
