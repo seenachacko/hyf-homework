@@ -36,10 +36,18 @@ function getProductsByName() {
 //searching by price 
 priceBox.addEventListener("keyup", getProductbyPrice);
 function getProductbyPrice() {
-    const givenPrice = priceBox.value;
+const givenPrice = priceBox.value;
+let sortedProducts =[];
+if (selectionBox.value === "cheap") {
+    sortedProducts=products.sort((a,b)=>a.rating>b.rating ? -1 : 1);
+    const filteredArrayByPrice = sortedProducts.filter(product=>product.price<= givenPrice); 
+    productsUl.innerHTML = '';
+    renderProducts(filteredArrayByPrice);
+}else {
     const filteredArrayByPrice = products.filter(product => product.price <= givenPrice);
     productsUl.innerHTML = '';
     renderProducts(filteredArrayByPrice);
+}
 }
 
 //sort
@@ -50,8 +58,14 @@ function findSelectedValue() {
     let sortedProducts = [];
     if (selectionBox.value === "rating") {
         sortedProducts = products.sort((a, b) => a.rating > b.rating ? -1 : 1);
-    } else if (selectionBox.value === "cheap") {
-        sortedProducts = products.sort((a, b) => a.price > b.price ? 1 : -1);
+    } else if (selectionBox.value==="cheap") { 
+        if (priceBox.value !== "") {
+            let acendingOrderProducts=[];
+            acendingOrderProducts=products.sort((a,b)=>a.price > b.price ? 1 : -1);
+            sortedProducts=acendingOrderProducts.filter(product=> product.price <= priceBox.value); 
+        }else{
+            sortedProducts=products.sort((a,b)=>a.price > b.price ? 1 : -1);
+        }
     } else if (selectionBox.value === "expensive") {
         sortedProducts = products.sort((a, b) => a.price > b.price ? -1 : 1);
     }
