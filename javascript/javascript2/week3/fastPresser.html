@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="fastpresser.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Fast Presser</h1>
+    <div class="main">
+    <input type="number" id="game-time"><br><br>
+    <label id="timer"></label>
+    <button id="start-button">Start Game</button>
+    <button id="newGame-button">New Game</button>
+    <h3 id="game-over"></h3> 
+    <h3 id="winner"></h3>
+    </div>
+    <div class="game-part">
+    <div class="s-side">
+   <canvas id="s-canvas"></canvas>
+    <h3>press s</h3> 
+    <p></p>
+    </div>
+
+    <div class="l-side">
+    <canvas id="l-canvas"></canvas>
+    <h3>press l</h3>
+    <p></p>
+    </div>
+
+    </div>
+    
+    <h3 id="winner"></h3>
+    <script src="https://cdn.jsdelivr.net/npm/confetti-js@0.0.13/dist/index.min.js"></script>
+    <script src="fastpresser.js"></script>
+</body>
+</html>
