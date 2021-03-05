@@ -63,7 +63,6 @@ function error() {
  }
  
  //7
-
 function runAfterDelay(delay,callback){
 setTimeout(() => {callback()}, delay*1000);
  }
@@ -71,14 +70,11 @@ setTimeout(() => {callback()}, delay*1000);
      console.log("should be logged after 4 sec");
  });
  //8
-
  window.addEventListener("dblclick",dobleClick);
  function dobleClick(){
  console.log("double click detected");
-
  }
  //9 
- 
  function jockeCreator(shoulTellFunnyJoke=true,logFunnyJoke,logBadJoke){
      if(shoulTellFunnyJoke == true){
         logFunnyJoke();
