@@ -64,22 +64,3 @@ newGameButton.addEventListener("click",()=>{
     countOfS.innerHTML="";
     countOfL.innerHTML="";
     })
-
-//https://keycode.info/
-//https://www.codeinwp.com/snippets/detect-what-key-was-pressed-by-the-user/
-//https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_event_key_keycode2
-
-
-/*
-document.addEventListener("keydown",detectKey);
-function detectKey(e) { 
-    let char = e.keyCode;
-    if (char == 83) {
-        sCount++   
-    }else if(char == 76){
-        lCount++;
-    }
-   console.log("s"+sCount);
-   console.log("l"+lCount);
-}
-*/
