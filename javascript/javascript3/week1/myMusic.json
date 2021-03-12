@@ -1,0 +1,19 @@
+[
+    {
+        "musicName": "drivers license",
+        "singers": "Olivia Rodrigo",
+        "AlbumName": "drivers license"
+    },
+    {
+        "musicName": "Anyone",
+        "singers": "Justin bieber",
+        "AlbumName": "anyone"
+
+    },
+    {
+        "musicName": "leave the door open",
+        "singers": ["bruno mars","anderson","paak","silk sonic"],
+        "AlbumName": "anyone"
+
+    }
+]
