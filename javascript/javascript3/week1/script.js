@@ -84,7 +84,7 @@ function error() {
 
 
 function displayMap(longitude, latitude) {
-    const map = document.getElementById("map");
+    let map = document.getElementById("map");
     map.innerHTML = "";
     map = new ol.Map({
         target: 'map',
