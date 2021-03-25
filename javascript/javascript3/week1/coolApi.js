@@ -6,7 +6,7 @@ fetch("https://www.thecocktaildb.com/api/json/v1/1/random.php")//fetch method he
         //we can access the values of object by using keys.
         console.log(coctailRecipes);
         const h2 = document.createElement("h2");
-        h2.innerHTML = coctailRecipes.drinks[0].strDrink;
+        h2.innerText = coctailRecipes.drinks[0].strDrink;
         document.body.appendChild(h2);
         const img = document.createElement("img");
         img.src = coctailRecipes.drinks[0].strDrinkThumb;

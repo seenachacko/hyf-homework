@@ -4,12 +4,12 @@ const displaySection = document.getElementById("display")
 
 submitButton.addEventListener("click", searchByCity)
 function searchByCity() {
+    const alert= document.getElementById("alert");
     const cityName = userInput.value;
     if (cityName === "") {
-        alert("enter city name");
-
+        alert.innerHTML="Please enter city name"
     } else {
-
+        alert.innerHTML ="";
         fetch(` https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=f0ce6478459bc391572e61d8a52e829d`)
             .then((response) => response.json())
             .then((whetherData) => {
