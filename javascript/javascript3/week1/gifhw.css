@@ -1,0 +1,46 @@
+body{
+    background-color: rgba(240, 176, 176, 0.774);
+  
+}
+.main{
+    text-align: center;
+}
+
+#inputBox,#numberofGif{
+    margin-top: 1%;
+    width: 15%;
+    height: 35px;
+    border: 2px solid whitesmoke;
+    border-radius: 10px;
+    background-color: rgba(211, 211, 211, 0.5);
+}
+
+#submitButton{
+    height: 40px;
+    width: 100px;
+    font-weight: bold;
+    border: 3px solid white;
+    border-radius: 10px;
+}
+ul li{
+    list-style: none;
+    margin-bottom: 2%;
+    
+}
+img{
+    width: 80%;
+    height: 80%;
+    border: 5px solid white;
+}
+#displaySection{
+    width: 30%;
+    padding: 2%;
+    margin-top:2%;
+    background-color: rgba(240, 176, 176, 0.774);
+    height:500px;
+    overflow:auto;
+    margin-left: 30%;
+    
+   
+    
+}
