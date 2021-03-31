@@ -9,7 +9,6 @@ function logShortestWord(wordsInArray){
     } 
 }
 //Find and count the Danish letters
-
 const danishString = "Jeg har en blå bil";
 logDanishLetters(danishString); // returns {total: 1, å: 1}
 const danishString2 = "Blå grød med røde bær";
