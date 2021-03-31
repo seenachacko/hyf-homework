@@ -1,8 +1,8 @@
 //promise
 function fetchWait(delayTime) {
     const myPromise = new Promise((resolve, reject) => {
-        setTimeout(() => {
-            const yesornoResponse = fetch("https://yesno.wtf/api");
+        const yesornoResponse = fetch("https://yesno.wtf/api");
+        setTimeout(() => { 
             resolve(yesornoResponse);
         }, delayTime * 1000);
 
@@ -15,6 +15,7 @@ fetchWait(3)
     .then((data) => console.log(data))
     .catch((error) => console.log("error"))
 //ayns-await
+
 async function fetchData(delayTime) {
     try {
         const response = await fetch("https://yesno.wtf/api")
@@ -27,4 +28,4 @@ async function fetchData(delayTime) {
     }
 }
 
-fetchData(5)
+fetchData(5);
