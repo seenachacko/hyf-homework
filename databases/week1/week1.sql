@@ -30,7 +30,7 @@ SELECT * FROM task
  #7
  SELECT title,description
  FROM task
- HAVING title IS NOT NULL OR description IS NOT NULL;
+ WHERE title LIKE '%database%' OR description LIKE '%database%';
 
 #8
 SELECT title, status.name AS status
