@@ -44,7 +44,7 @@ class ShoppingCart {
   getTotal() {
     const total= this.products.map(item=>item.price).reduce((sum,price)=>sum+price,0)
     console.log(total);
-    const h3 =document.createElement("h2");
+    const h2 =document.createElement("h2");
     h3.innerHTML="Total Price: " +total;
     document.body.appendChild(h3);
   }
