@@ -32,8 +32,6 @@ VALUES (10,36);
   WHERE task.id = 37;
   
   
-  #part2
-  
   
   
   
