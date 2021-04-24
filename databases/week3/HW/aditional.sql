@@ -1,5 +1,4 @@
 USE meal_sharing;
-SELECT * FROM meal;
 #Get meals that has a price smaller than a specific price fx 90
 SELECT * FROM meal
 WHERE price < 90;
@@ -7,7 +6,7 @@ WHERE price < 90;
 SELECT meal_id, title,SUM(number_of_guests),max_reservations FROM meal
 JOIN reservation ON meal.id= reservation.meal_id
 GROUP BY(reservation.meal_id)
-HAVING meal.max_reservations > SUM(number_of_guests);
+HAVING meal.max_reservations > SUM(number_of_guests) OR SUM(number_of_guests) = 0;
 #Get meals that partially match a title. Rød grød med will match the meal with the title Rød grød med fløde
 SELECT id,title,description,location,`when`,max_reservations,price,created_date
 FROM meal 
@@ -21,7 +20,7 @@ BETWEEN '2021-04-21' AND '2021-04-25';
 SELECT * FROM meal 
 LIMIT 4;
 #Get the meals that have good reviews
-SELECT review.meal_id, meal.title, review.stars 
+SELECT meal.id, meal.title, review.stars 
 FROM meal
 JOIN review ON meal.id=review.meal_id
 WHERE stars >3;
@@ -31,7 +30,7 @@ SELECT id,number_of_guests,meal_id,created_date,contact_phonenumber,contact_name
 WHERE meal_id = 3
 ORDER BY created_date ASC;
 #Sort all meals by average number of stars in the reviews
-SELECT meal_id, meal.title, avg(stars) 
+SELECT meal.id, meal.title, avg(review.stars) 
 FROM meal
 JOIN review ON meal.id = review.meal_id
 GROUP BY(meal_id)
