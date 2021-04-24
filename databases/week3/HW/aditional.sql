@@ -6,7 +6,7 @@ WHERE price < 90;
 SELECT meal_id, title,SUM(number_of_guests),max_reservations FROM meal
 JOIN reservation ON meal.id= reservation.meal_id
 GROUP BY(reservation.meal_id)
-HAVING meal.max_reservations > SUM(number_of_guests) OR SUM(number_of_guests) = 0;
+HAVING meal.max_reservations > SUM(number_of_guests) OR SUM(number_of_guests) == 0;
 #Get meals that partially match a title. Rød grød med will match the meal with the title Rød grød med fløde
 SELECT id,title,description,location,`when`,max_reservations,price,created_date
 FROM meal 
