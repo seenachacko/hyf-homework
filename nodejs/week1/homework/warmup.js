@@ -4,7 +4,9 @@ class Circle {
         this.radius = radius;
     }
     getDiameter() {
-        console.log(this.radius * 2);
+        const diameter = 2 * this.radius
+        console.log(diameter)
+        return diameter
     }
     getCircumference() {
         console.log(2 * Math.PI * this.radius);
