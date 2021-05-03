@@ -21,7 +21,7 @@ CREATE TABLE `reservation` (
   `contact_phonenumber` varchar(255) NOT NULL,
   `contact_name` varchar(255) NOT NULL,
   `contact_email` varchar(255) NOT NULL,  
-  CONSTRAINT `fk_meal` FOREIGN KEY (`meal_id`) REFERENCES `meal` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+  CONSTRAINT `fk_reservation_meal` FOREIGN KEY (`meal_id`) REFERENCES `meal` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
   )ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
   
   CREATE TABLE `review` (
@@ -31,7 +31,7 @@ CREATE TABLE `reservation` (
   `meal_id` int(10) unsigned NOT NULL,
   `stars` int(10) unsigned NOT NULL,
   `created_date` date NOT NULL default (CURRENT_DATE),  
-  CONSTRAINT `fk_meals_review` FOREIGN KEY (`meal_id`) REFERENCES `meal` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+  CONSTRAINT `fk_meal_review` FOREIGN KEY (`meal_id`) REFERENCES `meal` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
   )ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
   #datas for meal table
 INSERT INTO meal (title, description, location,`when`, max_reservations, price, created_date) 
