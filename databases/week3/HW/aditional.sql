@@ -44,5 +44,5 @@ ORDER BY created_date ASC;
 SELECT meal.id, meal.title, avg(review.stars) 
 FROM meal
 JOIN review ON meal.id = review.meal_id
-GROUP BY(meal_id)
+GROUP BY(meal.id)
 ORDER BY avg(stars) DESC;
