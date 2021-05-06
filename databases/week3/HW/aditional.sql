@@ -3,10 +3,21 @@ USE meal_sharing;
 SELECT * FROM meal
 WHERE price < 90;
 #Get meals that still has available reservations
-SELECT meal.id, title,SUM(number_of_guests),max_reservations FROM meal
-JOIN reservation ON meal.id= reservation.meal_id
-GROUP BY(reservation.meal_id)
-HAVING meal.max_reservations > SUM(number_of_guests) OR SUM(number_of_guests) = 0;
+SELECT
+    meal.id AS meal_id,
+    title,
+    description,
+    location,
+    price,
+    max_reservations,
+    COALESCE(SUM(number_of_guests), 0) AS total_reservations
+FROM
+    meal
+    LEFT JOIN reservation ON meal.id = meal_id
+GROUP BY
+    meal.id
+HAVING
+    max_reservations > total_reservations;
 #Get meals that partially match a title. Rød grød med will match the meal with the title Rød grød med fløde
 SELECT id,title,description,location,`when`,max_reservations,price,created_date
 FROM meal 
