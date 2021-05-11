@@ -57,7 +57,7 @@ router.get("/:id", async (request, response) => {
     else
       response.status(404).send(`There is no meal with id  ${id}`);
   } catch (error) {
-    throw error;
+    response.status(500).send(`Internal Server Error`) ;
   }
 
 });
