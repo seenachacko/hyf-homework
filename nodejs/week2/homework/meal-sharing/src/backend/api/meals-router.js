@@ -39,7 +39,7 @@ router.get("/", async (request, response) => {
   
     response.send(selectedMeals);
   } catch (error) {
-    throw error;
+    response.status(500).send({ error: "internal server error" });
   }
 
 });

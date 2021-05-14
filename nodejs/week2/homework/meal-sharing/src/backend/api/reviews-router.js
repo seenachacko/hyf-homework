@@ -8,7 +8,8 @@ router.get("/", async (request, response) => {
     console.log(reviews);
     console.log("in /api/reviews");
   } catch (error) {
-    throw error;
+    response.status(500).send({ error: "internal server error" });
+
   }
 });
 router.get("/:id", async (request, response) => {
@@ -16,10 +17,16 @@ router.get("/:id", async (request, response) => {
     console.log(reviews);
     console.log("in /api/reviews");
     const id = parseInt(request.params.id);
+    if(isNaN(id)){
     const selected = reviews.filter(review => review.id === id);
     response.send(selected);
+    }
+    else{
+      esponse.status(400).send('Review IDs must be numbers.');
+    }
   } catch (error) {
-    throw error;
+    response.status(500).send({ error: "internal server error" });
+
   }
 
 });
