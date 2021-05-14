@@ -22,7 +22,7 @@ router.get("/:id", async (request, response) => {
     response.send(selected);
     }
     else{
-      esponse.status(400).send('Review IDs must be numbers.');
+      response.status(400).send('Review IDs must be numbers.');
     }
   } catch (error) {
     response.status(500).send({ error: "internal server error" });

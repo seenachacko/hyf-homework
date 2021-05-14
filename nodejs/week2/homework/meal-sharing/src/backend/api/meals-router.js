@@ -31,7 +31,7 @@ router.get("/", async (request, response) => {
     if ('limit' in request.query) {
       const limit = parseInt(request.query.limit);
       if (isNaN(limit)) {
-        res.status(400).send({ error: "limit should be an integer" });
+        res.status(404).send({ error: "limit should be an integer" });
         return;
       }
       selectedMeals = selectedMeals.slice(0, limit);
