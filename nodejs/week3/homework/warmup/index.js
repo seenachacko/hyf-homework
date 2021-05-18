@@ -28,7 +28,14 @@ app.post("/calculator/multiply", (req, res) => {
     }
 
 });
-
+/*
+app.post("/multiply", (req, res) =>{
+    let values = Object.values(req.body)
+    values = values.flat()
+    values = values.map(n=> Number(n))
+    let mult = values.reduce((a,b) => a * b)
+    res.send(`${mult}`)
+});*/
 app.get("/calculator/subtraction", (req, res) => {
     const values = Object.values(req.query).flat()
     const subtraction = values.reduce((acc, val) => acc - val)
