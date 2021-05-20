@@ -1,0 +1,10 @@
+table, th{
+    border:2px solid rgb(112, 110, 110)
+    
+}
+table{
+    width: 50%;
+    color:whitesmoke;
+    background-color: rgb(70, 68, 68);
+    border-radius: 2px;
+}
