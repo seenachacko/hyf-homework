@@ -5,11 +5,11 @@ function Todo(props) {
     return (
         <div>
             <table>
-            <tr>
-                <td>{props.item.id}</td>
-                <td>{props.item.todo}</td>
-                <td>{props.item.deadline}</td>
-            </tr>
+                <tr>
+                    <td>{props.item.id}</td>
+                    <td>{props.item.todo}</td>
+                    <td>{props.item.deadline}</td>
+                </tr>
             </table>
         </div>
     );
