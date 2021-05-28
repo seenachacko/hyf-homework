@@ -1,5 +1,6 @@
 import React from 'react';
 import Todo from './Todo';
+import './Todo.css'
 
 function Mylist() {
     const todoList = [
@@ -9,9 +10,10 @@ function Mylist() {
     ];
     const todoItem = todoList.map(element=> <Todo key={element.id} item={element} /> )
     return (
-        <div>
+            <table>
             { todoItem}
-        </div>
+            </table>
+
     );
 }
 export default Mylist;
