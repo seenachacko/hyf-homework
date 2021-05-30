@@ -1,30 +1,31 @@
 import React, { useState } from 'react';
 import Header from './Components/Header';
 import './App.css';
-import todoArray from './Components/Mylist.json';
+import todoArray from './data.json';
 import Timer from './Components/Timer';
-import Todolist from './Components/TodoLsit';
+import Todolist from './Components/TodoList';
 function App() {
   const randomList = ["do dishes", "party on next door", "Do laundry", "make food"]
-  const [toDoList, setToDoList] = useState(todoArray);
+  const [todoList, setTodoList] = useState(todoArray);
   const addTodo = () => {
     const randomIndex = Math.floor(Math.random() * randomList.length);
-    setToDoList([...toDoList, {
-      id: toDoList.length + 1,
+    setTodoList([...todoList, {
+      id: todoList.length > 0 ? todoList[todoList.length - 1].id + 1 : 1,
       description: randomList[randomIndex],
       complete: false
     }])
+    console.log(todoList);
   }
   function deleteTodo(id){
-    const myNewTodoList= toDoList.filter((todo)=>todo.id !==id);
-    setToDoList(myNewTodoList);
+    const myNewTodoList= todoList.filter((todo)=>todo.id !==id);
+    setTodoList(myNewTodoList);
   }
   return (
-    <div className="mainContainer">
+    <div className="main-Container">
       <Header />
       <Timer />
-      <Todolist toDoList={toDoList} deleteTodo={deleteTodo} />
-      <button className="addbutton"onClick={addTodo}>Add Button</button>
+      <Todolist toDoList={todoList} deleteTodo={deleteTodo} />
+      <button className="add-button"onClick={addTodo}>Add Todo</button>
     </div>
   );
 }

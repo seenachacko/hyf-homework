@@ -1,7 +1,7 @@
 .App {
   text-align: center;
 }
-.mainContainer{
+.main-Container{
  margin:10%;
 background-color: yellowgreen;
 border: 2px solid;
@@ -11,13 +11,13 @@ color: white;
 text-align: center;
 }
 
-.addbutton,.deletebutton{
+.add-button,.delete-button{
   margin: 5px;
   background: green;
   color: white;
   border-radius: 5px;
 }
-.deletebutton{
+.delete-button{
   background:red;
 }
 .todo{
@@ -27,7 +27,7 @@ text-align: center;
 list-style: none;
 color: indigo;
 }
-.headerContainer{
+.header-Container{
   text-align: center;
   text-decoration: underline;
   color:mediumvioletred ;

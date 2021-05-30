@@ -15,7 +15,7 @@ function Timer() {
 
     return (
         <div className="watchcount">
-           You have Used  {count} seconds on this Website
+           You have used  {count} seconds on this website
         </div>
     )
 
