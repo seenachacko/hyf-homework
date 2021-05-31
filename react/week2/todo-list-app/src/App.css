@@ -1,0 +1,35 @@
+.App {
+  text-align: center;
+}
+.main-Container{
+ margin:10%;
+background-color: yellowgreen;
+border: 2px solid;
+border-radius: 10px;
+padding: 20px;
+color: white;
+text-align: center;
+}
+
+.add-button,.delete-button{
+  margin: 5px;
+  background: green;
+  color: white;
+  border-radius: 5px;
+}
+.delete-button{
+  background:red;
+}
+.todo{
+  margin: 5px;
+}
+ ul , li{
+list-style: none;
+color: indigo;
+}
+.header-Container{
+  text-align: center;
+  text-decoration: underline;
+  color:mediumvioletred ;
+}
+
