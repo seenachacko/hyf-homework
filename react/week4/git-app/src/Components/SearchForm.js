@@ -6,14 +6,13 @@ function SearchForm() {
   const { fetchUserswithApi } = useContext(ApiData);
 
   return (
-      <div>
-    <input
-      type="text"
-      placeholder="Search for user"
-      onChange={(e) => fetchUserswithApi(e.target.value)}
-    />
-    <RenderUsers />
-    
+    <div>
+      <input
+        type="text"
+        placeholder="Search for user"
+        onChange={(e) => fetchUserswithApi(e.target.value)}
+      />
+      <RenderUsers />
     </div>
   );
 }

@@ -16,7 +16,6 @@ function FetchUsers() {
       }
       const data = await response.json();
       setIsLoaded(true);
-      console.log(data.items);
       setUsers(data.items);
      
     } catch (error) {
