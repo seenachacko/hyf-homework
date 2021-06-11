@@ -1,45 +1,45 @@
 import React, { useState } from "react";
 import Border from "./Border";
 import PropTypes from "prop-types";
-function Todo({ toDo, deleteTodo, updateTodo }) {
+function Todo({ todo, deleteTodo, updateTodo }) {
   const [status, setStatus] = useState(false);
-  const [isEditing, setEditState] = useState(false);
-  const [newdescription, setDescription] = useState(toDo.description);
+  const [isEditing, setIsEditing] = useState(false);
+  const [newdescription, setNewDescription] = useState(todo.description);
 
   const check = () => {
     setStatus(!status);
   };
 
   const editStatus = () => {
-    return setEditState(!isEditing);
+    return  setIsEditing(!isEditing);
   };
 
   const updateButton = () => {
     if (newdescription === "") {
       alert("plese enter the task");
     } else {
-      updateTodo(toDo.id, newdescription);
-      setEditState(!isEditing);
+      updateTodo(todo.id, newdescription);
+      setIsEditing(!isEditing);
     }
   };
   const editingTemplate = (
-    <>
+    <ul>
       <li className="todo">
         <input
           value={newdescription}
           type="text"
           onChange={(event) => {
-            setDescription(event.target.value);
+            setNewDescription(event.target.value);
           }}
         />
-        <button className="update-button" onClick={updateButton}>
+        <button className="green-button" onClick={updateButton}>
           update
         </button>
-        <button className="delete-button" onClick={() => deleteTodo(toDo.id)}>
+        <button className="delete-button" onClick={() => deleteTodo(todo.id)}>
           delete
         </button>
       </li>
-    </>
+    </ul>
   );
 
   const viewTemplate = (
@@ -49,12 +49,12 @@ function Todo({ toDo, deleteTodo, updateTodo }) {
           className="todo"
           style={{ textDecoration: status ? "line-through" : "none" }}
         >
-          {toDo.description} - {toDo.deadline}
-          <input type="checkbox" value={toDo.id} onClick={check}></input>
-          <button className="delete-button" onClick={() => deleteTodo(toDo.id)}>
+          {todo.description} - {todo.deadline}
+          <input type="checkbox" value={todo.id} onClick={check}></input>
+          <button className="delete-button" onClick={() => deleteTodo(todo.id)}>
             delete
           </button>
-          <button className="edit-button" onClick={editStatus}>
+          <button className="green-button" onClick={editStatus}>
             Edit
           </button>
         </li>

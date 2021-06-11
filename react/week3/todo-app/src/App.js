@@ -1,18 +1,18 @@
 import React, { useEffect, useState } from "react";
 import Header from "./Components/Header";
 import "./App.css";
-import Addtodo from "./Components/Addtodo";
+import AddTodo from "./Components/AddTodo";
 import Timer from "./Components/Timer";
-import Todolist from "./Components/TodoList";
+import TodoList from "./Components/TodoList";
 function App() {
   const [error, setError] = useState(null);
   const [isLoaded, setIsLoaded] = useState(false);
   const [todoList, setTodoList] = useState([]);
-  const Api =
+  const api =
     "https://gist.githubusercontent.com/benna100/391eee7a119b50bd2c5960ab51622532/raw";
 
   useEffect(() => {
-    fetch(Api)
+    fetch(api)
       .then((response) => response.json())
       .then(
         (fetchedTodoList) => {
@@ -32,7 +32,6 @@ function App() {
   }
 
   const addTodo = (userInput, startDate) => {
-    console.log(startDate);
     setTodoList([
       ...todoList,
       {
@@ -41,7 +40,6 @@ function App() {
         deadline: startDate.toISOString().substring(0, 10),
       },
     ]);
-    console.log(todoList);
   };
   const deleteTodo = (id) => {
     const myNewTodoList = todoList.filter((todo) => todo.id !== id);
@@ -60,10 +58,10 @@ function App() {
     <div className="main-Container">
       <Header />
       <Timer />
-      <Addtodo addTodo={addTodo} />
+      <AddTodo addTodo={addTodo} />
 
-      <Todolist
-        toDoList={todoList}
+      <TodoList
+        todoList={todoList}
         deleteTodo={deleteTodo}
         updateTodo={updateTodo}
       />

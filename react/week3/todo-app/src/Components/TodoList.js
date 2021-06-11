@@ -1,22 +1,22 @@
 import React from "react";
 import Todo from "./Todo";
-function Todolist({ toDoList, deleteTodo, updateTodo }) {
+function TodoList({ todoList, deleteTodo, updateTodo }) {
   return (
     <div>
-      <ul>
-        {toDoList.length > 0
-          ? toDoList.map((item) => (
+      
+        {todoList.length > 0
+          ? todoList.map((item) => (
               <Todo
                 key={item.id}
-                toDo={item}
+                todo={item}
                 deleteTodo={deleteTodo}
                 updateTodo={updateTodo}
               />
             ))
           : "No items left !!!"}
-      </ul>
+      
     </div>
   );
 }
 
-export default Todolist;
+export default TodoList;

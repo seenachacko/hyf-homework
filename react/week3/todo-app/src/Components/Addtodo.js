@@ -38,7 +38,7 @@ const AddTodo = ({ addTodo }) => {
         dateFormat="yyyy/MM/dd"
       />
       <br />
-      <button className="add-button" onClick={addTask}>
+      <button className="green-button" onClick={addTask}>
         Add Task
       </button>
     </div>

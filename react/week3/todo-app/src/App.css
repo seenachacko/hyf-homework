@@ -10,11 +10,13 @@
   color: white;
   text-align: center;
 }
+.border{
+   border: "2px solid white";
+   margin : "5px" 
+}
 
-.add-button,
 .delete-button,
-.edit-button,
-.update-button {
+.green-button {
   margin: 5px;
   background: green;
   color: white;
