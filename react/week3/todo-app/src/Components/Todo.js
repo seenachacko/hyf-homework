@@ -23,8 +23,8 @@ function Todo({ todo, deleteTodo, updateTodo }) {
     }
   };
   const editingTemplate = (
-    <ul>
-      <li className="todo">
+    <div className="todo">
+      
         <input
           value={newdescription}
           type="text"
@@ -38,18 +38,18 @@ function Todo({ todo, deleteTodo, updateTodo }) {
         <button className="delete-button" onClick={() => deleteTodo(todo.id)}>
           delete
         </button>
-      </li>
-    </ul>
+      
+    </div>
   );
 
   const viewTemplate = (
-    <>
-      <Border>
-        <li
+        
+          <Border>
+          <span
           className="todo"
           style={{ textDecoration: status ? "line-through" : "none" }}
         >
-          {todo.description} - {todo.deadline}
+          {todo.description} - {todo.deadline}</span>
           <input type="checkbox" value={todo.id} onClick={check}></input>
           <button className="delete-button" onClick={() => deleteTodo(todo.id)}>
             delete
@@ -57,9 +57,11 @@ function Todo({ todo, deleteTodo, updateTodo }) {
           <button className="green-button" onClick={editStatus}>
             Edit
           </button>
-        </li>
-      </Border>
-    </>
+          </Border>
+        
+
+      
+    
   );
 
   return <div>{isEditing ? editingTemplate : viewTemplate}</div>;
