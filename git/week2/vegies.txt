@@ -1,5 +1,7 @@
 cucumber 
 potato
-tomato
+red-tomato
 cabbage
 brinjal
+carrot
+beetroot
