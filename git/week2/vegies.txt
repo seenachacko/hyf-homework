@@ -1,5 +1,5 @@
 cucumber 
 potato
-tomato
+green-tomato
 cabbage
 brinjal
