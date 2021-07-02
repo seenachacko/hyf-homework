@@ -6,7 +6,8 @@ function FetchUsers() {
   const [isLoaded, setIsLoaded] = useState(false);
   const [error, setError] = useState(null);
   const fetchUserswithApi = async (user) => {
-    const api = `https://api.github.com/search/users?q=${user}`;
+    if (user!=='') {
+      const api = `https://api.github.com/search/users?q=${user}`;
 
     try {
       const response = await fetch(api);
@@ -22,6 +23,10 @@ function FetchUsers() {
       setIsLoaded(true);
       setError(error);
     }
+      
+    }
+    
+    
   };
 
   useEffect(() => {
