@@ -11,7 +11,7 @@ const AddTodo = ({ addTodo }) => {
     setUserInput(e.target.value);
   };
 
-  const addTask = (e) => {
+  const addTask = () => {
     if (userInput === "") {
       alert("please enter a task");
     } else if (!startDate) {

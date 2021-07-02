@@ -7,8 +7,10 @@ function Timer() {
       setCount((prev) => prev + 1);
     }, 1000);
     return () => {
+     
       // called right before the next useEffect
       clearTimeout(timerId);
+
     };
   });
 
