@@ -9,7 +9,9 @@ function RenderUsers() {
         <h3>No result</h3>
       ) : (
         users.map((user) => {
-          return <li key={user.id}>{user.login}</li>;
+          console.log(user)
+          return <li key={user.id}><img src={user.avatar_url} alt='avathar' width={50} height={50}/><br></br><a target="_blank" href={user.html_url}>{user.login}</a>
+          </li>;
         })
       )}
     </ul>

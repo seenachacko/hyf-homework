@@ -2,7 +2,7 @@ import React, { useState, useEffect} from "react";
 import SearchForm from "./SearchForm";
 export const ApiData = React.createContext();
 function FetchUsers() {
-  const [users, setUsers] = useState("");
+  const [users, setUsers] = useState([]);
   const [isLoaded, setIsLoaded] = useState(false);
   const [error, setError] = useState(null);
   const fetchUserswithApi = async (user) => {
