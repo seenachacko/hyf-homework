@@ -1,9 +1,19 @@
 .App {
   text-align: center;
 }
+ul{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
 
-ul,li{
+
+ul li{
   list-style: none;
   color: rgb(39, 42, 223);
-  font-size: 15px;
+  font-size: 20px;
+  margin: 5px;
+  padding: 2px;
+  border: 2px solid palevioletred;
+  width: 16%;
 }
